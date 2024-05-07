@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Set minimum height to 100vh */
+  overflow: hidden; /* Hide overflow for body */
+}
+
+
+.progress-bar-container {
+  margin-bottom: 10px;
+}
+.file-info {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.container {
+  text-align: center;
+  max-height: 100vh; /* Set maximum height to 100vh */
+  overflow-y: auto; /* Enable vertical scrolling for container if needed */
+}
+
+.drop-area {
+  border: 2px dashed #ccc;
+  padding: 40px; /* Increase the padding to make it larger */
+  cursor: pointer;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.larger-drop-area {
+  max-height: 200px;
+  width: 65vw; /* Set width to 50% of the viewport width */
+  height: 25vw; /* Set height to 25% of the viewport width */
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#progress {
+  margin-top: 10px;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Add this CSS to align the progress list to the left */
+#progress-list {
+  text-align: left;
+  width: auto;
+  max-height: calc(100vh - 150px); /* Set maximum height for progress list */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+
+/* Add this CSS to style the progress bars */
+.progress-bar-container {
+  margin-bottom: 10px;
+}
+
+.progress-bar-container progress {
+  width: 70%;
+  height: 20px;
+}
+
+.progress-bar-container span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+/* Styling for Chrome, Safari, and Opera progress bar */
+progress[value]::-webkit-progress-bar {
+  background-color: grey;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Reset appearance for Internet Explorer */
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 50%;
+  height: 15px;
+  color: grey; /* Use color property for Internet Explorer */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom styles for success state */
+.progress-success::-webkit-progress-value {
+  background-color: green;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-success::-moz-progress-bar {
+  background-color: green;
+  border-radius: 10px; /* Rounded corners */
+}
+/* Custom styles for default state */
+.progress-default::-webkit-progress-value {
+  background-color: grey;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-default::-moz-progress-bar {
+  background-color: grey;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom styles for error state */
+.progress-error::-webkit-progress-value {
+  background-color: red;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-error::-moz-progress-bar {
+  background-color: red;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-error {
+  background-color: red;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* CSS for progress wrapper */
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* CSS for progress label */
+.progress-label {
+  margin-left: 10px; /* Adjust margin as needed */
+  color: inherit; /* Inherit color from parent (progress bar) */
+}
+
+/* Custom styles for error state */
+.error .progress-label {
+  color: red; /* Set text color to red for error state */
+}
+.error progress[value] {
+  color: red;
+}
+.error progress[value]::-webkit-progress-bar {
+  background-color: red;
+}
+
+.progress-label{
+  font-weight: bold;
+  font-size: large;
+}
+
+.label-success{
+  color:green;
+}
+
+.label-error{
+  color:red;
+}
+
+
+#progress {
+  margin-top: 10px;
+  max-height: 300px; /* Set a fixed maximum height for the progress container */
+  overflow-y: auto; /* Enable vertical scrolling if contents overflow */
+}
+
+.progress-bar-container {
+  margin-bottom: 10px;
+  max-width: 90%; /* Limit the width of progress bars to 90% of the container */
+}
+
+.progress-list {
+  max-height: inherit; /* Inherit the max height from the progress container */
+  overflow-y: auto; /* Enable vertical scrolling if contents overflow */
+}
